@@ -7,7 +7,9 @@ import {
   Settings, 
   Wrench, 
   HardHat,
-  PaintBucket
+  PaintBucket,
+  Zap,
+  Shield
 } from 'lucide-react';
 
 const ServicesSection = () => {
@@ -15,43 +17,45 @@ const ServicesSection = () => {
     {
       icon: Home,
       title: "Reformas Completas",
-      description: "Reformas residenciais e comerciais com planejamento detalhado e execução impecável.",
-      features: ["Cozinhas", "Banheiros", "Salas", "Comércios"],
-      gradient: "from-logo-orange/10 to-logo-orange/5"
+      description: "Transformação total de ambientes residenciais e comerciais com planejamento detalhado, acompanhamento profissional e acabamento impecável.",
+      features: ["Cozinhas Modernas", "Banheiros Luxuosos", "Salas Integradas", "Estabelecimentos Comerciais"],
+      gradient: "from-logo-orange/10 to-logo-orange/5",
+      highlight: "Mais Procurado"
     },
     {
       icon: HardHat,
       title: "Construção do Zero",
-      description: "Construção completa com acompanhamento profissional em todas as etapas.",
-      features: ["Fundação", "Estrutura", "Cobertura", "Acabamento"],
-      gradient: "from-logo-blue/10 to-logo-blue/5"
+      description: "Projetos de construção completa desde a fundação até o acabamento final, com supervisão técnica em todas as etapas e garantia de qualidade.",
+      features: ["Fundação Sólida", "Estrutura Reforçada", "Cobertura Durável", "Acabamento Premium"],
+      gradient: "from-logo-blue/10 to-logo-blue/5",
+      highlight: "Especialidade"
     },
     {
       icon: Settings,
       title: "Telhados e Coberturas",
-      description: "Instalação e manutenção de telhados duráveis com materiais de qualidade.",
-      features: ["Colonial", "Moderno", "Calhas", "Estruturas"],
+      description: "Instalação, manutenção e reparo de telhados com materiais de primeira qualidade, garantindo proteção duradoura contra intempéries.",
+      features: ["Telhado Colonial", "Cobertura Moderna", "Sistema de Calhas", "Estruturas Metálicas"],
       gradient: "from-logo-orange/10 to-logo-orange/5"
     },
     {
       icon: Hammer,
-      title: "Carpintaria",
-      description: "Serviços especializados em madeira e acabamentos personalizados.",
-      features: ["Portas", "Janelas", "Móveis", "Pergolados"],
+      title: "Carpintaria Especializada",
+      description: "Serviços artesanais em madeira com técnicas tradicionais e modernas, criando soluções personalizadas e funcionais para seu espaço.",
+      features: ["Portas Sob Medida", "Janelas Artesanais", "Móveis Planejados", "Pergolados e Decks"],
       gradient: "from-logo-blue/10 to-logo-blue/5"
     },
     {
       icon: Wrench,
-      title: "Hidráulica",
-      description: "Instalações e reparos hidráulicos com garantia e atendimento rápido.",
-      features: ["Vazamentos", "Instalações", "Manutenção", "Emergências"],
+      title: "Hidráulica e Elétrica",
+      description: "Instalações e manutenções hidráulicas e elétricas com técnicas modernas, materiais certificados e atendimento de emergência disponível.",
+      features: ["Instalações Novas", "Reparo de Vazamentos", "Modernização Elétrica", "Emergências 24h"],
       gradient: "from-logo-orange/10 to-logo-orange/5"
     },
     {
       icon: PaintBucket,
-      title: "Acabamentos",
-      description: "Pintura e revestimentos que fazem a diferença no resultado final.",
-      features: ["Pintura", "Revestimentos", "Texturas", "Detalhes"],
+      title: "Acabamentos Premium",
+      description: "Pintura profissional, aplicação de revestimentos e texturas especiais que transformam ambientes com durabilidade e beleza excepcionais.",
+      features: ["Pintura Residencial", "Revestimentos Especiais", "Texturas Decorativas", "Detalhes Artísticos"],
       gradient: "from-logo-blue/10 to-logo-blue/5"
     }
   ];
@@ -69,10 +73,11 @@ const ServicesSection = () => {
         {/* Header */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Nossos <span className="text-logo-orange">Serviços</span>
+            Serviços <span className="text-logo-orange">Especializados</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Soluções completas com 30 anos de experiência e compromisso com a excelência
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Soluções completas em construção civil com três décadas de experiência comprovada. 
+            Do projeto à entrega, garantimos excelência em cada detalhe.
           </p>
         </div>
 
@@ -81,8 +86,16 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className={`border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group bg-gradient-to-br ${service.gradient} backdrop-blur-sm`}
+              className={`border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group bg-gradient-to-br ${service.gradient} backdrop-blur-sm relative overflow-hidden`}
             >
+              {service.highlight && (
+                <div className="absolute top-4 right-4">
+                  <span className="bg-logo-orange text-white text-xs font-semibold px-3 py-1 rounded-full shadow-lg">
+                    {service.highlight}
+                  </span>
+                </div>
+              )}
+              
               <CardContent className="p-8">
                 <div className="w-16 h-16 bg-logo-orange/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-logo-orange/30 transition-all duration-300 group-hover:scale-110">
                   <service.icon className="w-8 h-8 text-logo-orange" />
@@ -92,14 +105,14 @@ const ServicesSection = () => {
                   {service.title}
                 </h3>
                 
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-muted-foreground mb-6 leading-relaxed text-sm">
                   {service.description}
                 </p>
                 
-                <div className="grid grid-cols-2 gap-3">
+                <div className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-logo-orange rounded-full"></div>
+                    <div key={featureIndex} className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-logo-orange rounded-full flex-shrink-0"></div>
                       <span className="text-sm text-muted-foreground font-medium">{feature}</span>
                     </div>
                   ))}
@@ -109,13 +122,42 @@ const ServicesSection = () => {
           ))}
         </div>
 
+        {/* Diferenciais */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {[
+            {
+              icon: Shield,
+              title: "Garantia Total",
+              description: "Todos os serviços incluem garantia de qualidade e suporte pós-obra."
+            },
+            {
+              icon: Zap,
+              title: "Resposta Rápida",
+              description: "Orçamentos em até 24h e início dos trabalhos conforme acordado."
+            },
+            {
+              icon: Settings,
+              title: "Materiais Premium",
+              description: "Parceria com fornecedores de confiança para materiais de primeira linha."
+            }
+          ].map((diferencial, index) => (
+            <div key={index} className="text-center p-6 rounded-xl bg-gradient-to-br from-background to-logo-light/5 border border-border/50">
+              <diferencial.icon className="w-12 h-12 text-logo-orange mx-auto mb-4" />
+              <h4 className="text-lg font-semibold text-foreground mb-3">{diferencial.title}</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">{diferencial.description}</p>
+            </div>
+          ))}
+        </div>
+
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-logo-light/10 via-background to-logo-blue/5 rounded-3xl p-12 md:p-16 border border-border/50 shadow-xl">
           <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Pronto para começar seu projeto?
+            Pronto para Transformar seu Espaço?
           </h3>
-          <p className="text-xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
-            Entre em contato e receba um orçamento gratuito e detalhado para transformar seus sonhos em realidade.
+          <p className="text-xl text-muted-foreground mb-10 max-w-4xl mx-auto leading-relaxed">
+            Entre em contato hoje mesmo e receba um orçamento gratuito e detalhado. 
+            Vamos juntos planejar a obra dos seus sonhos com a experiência e qualidade 
+            que só três décadas de dedicação podem oferecer.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button 
@@ -123,7 +165,7 @@ const ServicesSection = () => {
               className="bg-logo-orange hover:bg-logo-orange/90 text-white px-10 py-6 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
               onClick={scrollToContact}
             >
-              Solicitar Orçamento
+              Solicitar Orçamento Detalhado
             </Button>
             <Button 
               size="lg" 
@@ -131,7 +173,7 @@ const ServicesSection = () => {
               className="border-2 border-logo-blue text-logo-blue hover:bg-logo-blue hover:text-white px-10 py-6 text-lg font-semibold transition-all duration-300"
               onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
             >
-              WhatsApp Direto
+              Conversar no WhatsApp
             </Button>
           </div>
         </div>

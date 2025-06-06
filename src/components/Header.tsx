@@ -25,13 +25,13 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-b border-border z-50">
       <div className="container mx-auto max-w-7xl">
-        <div className="flex items-center justify-between h-20 px-4">
-          {/* Logo */}
+        <div className="flex items-center justify-between h-24 px-4">
+          {/* Logo - Maior no lado esquerdo */}
           <div className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/fe934f48-b0db-4a5f-aa80-f5d0fed0a611.png" 
               alt="General Construções e Reformas" 
-              className="h-12 w-auto"
+              className="h-16 w-auto lg:h-20"
             />
           </div>
 
