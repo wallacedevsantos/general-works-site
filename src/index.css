@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Design system for General Construções e Reformas */
+/* Design system para General Construções e Reformas - Baseado no logotipo */
 
 @layer base {
   :root {
@@ -16,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 211 100% 18%; /* Azul-escuro profissional */
+    --primary: 210 100% 45%; /* Azul do uniforme do General */
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -25,7 +25,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 25 95% 53%; /* Laranja vibrante */
+    --accent: 35 100% 60%; /* Laranja/amarelo do capacete e logo */
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -35,13 +35,13 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Custom colors for construction theme */
-    --construction-gray: 220 13% 18%; /* Cinza escuro */
-    --construction-light-gray: 220 14% 96%;
-    --construction-orange: 25 95% 53%;
-    --construction-blue: 211 100% 18%;
+    /* Cores específicas do logotipo */
+    --logo-orange: 35 100% 60%; /* Laranja/amarelo principal */
+    --logo-blue: 210 100% 45%; /* Azul do uniforme */
+    --logo-dark: 222.2 84% 15%; /* Cor escura do contorno */
+    --logo-light: 35 100% 95%; /* Versão clara do laranja */
   }
 
   .dark {
@@ -76,13 +76,13 @@
     @apply bg-background text-foreground font-sans;
   }
 
-  .construction-gradient {
-    background: linear-gradient(135deg, hsl(var(--construction-blue)) 0%, hsl(var(--construction-gray)) 100%);
+  .logo-gradient {
+    background: linear-gradient(135deg, hsl(var(--logo-orange)) 0%, hsl(var(--logo-blue)) 100%);
   }
 
   .hero-pattern {
     background-image: 
-      radial-gradient(circle at 25% 25%, hsl(var(--construction-orange) / 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, hsl(var(--primary) / 0.1) 0%, transparent 50%);
+      radial-gradient(circle at 25% 25%, hsl(var(--logo-orange) / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(var(--logo-blue) / 0.05) 0%, transparent 50%);
   }
 }

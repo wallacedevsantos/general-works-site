@@ -15,38 +15,38 @@ const ServicesSection = () => {
     {
       icon: Home,
       title: "Reformas Completas",
-      description: "Reformas residenciais e comerciais com planejamento detalhado e execução impecável.",
-      features: ["Reforma de cozinhas", "Banheiros modernos", "Salas e quartos", "Comércios"]
+      description: "Reformas residenciais e comerciais com planejamento detalhado.",
+      features: ["Cozinhas", "Banheiros", "Salas", "Comércios"]
     },
     {
       icon: HardHat,
       title: "Construção do Zero",
-      description: "Construção de casas e estabelecimentos comerciais com acompanhamento completo.",
+      description: "Construção completa com acompanhamento profissional.",
       features: ["Fundação", "Estrutura", "Cobertura", "Acabamento"]
     },
     {
       icon: Settings,
-      title: "Instalações e Telhados",
-      description: "Instalação de telhados diversos e estruturas de cobertura duráveis.",
-      features: ["Telhado colonial", "Telhado moderno", "Calhas", "Estruturas metálicas"]
+      title: "Telhados",
+      description: "Instalação e manutenção de telhados duráveis.",
+      features: ["Colonial", "Moderno", "Calhas", "Estruturas"]
     },
     {
       icon: Hammer,
       title: "Carpintaria",
-      description: "Serviços especializados em madeira e acabamentos personalizados.",
-      features: ["Portas e janelas", "Móveis sob medida", "Divisórias", "Pergolados"]
+      description: "Serviços especializados em madeira e acabamentos.",
+      features: ["Portas", "Janelas", "Móveis", "Pergolados"]
     },
     {
       icon: Wrench,
-      title: "Reparos Hidráulicos",
-      description: "Manutenção e instalações hidráulicas com garantia de qualidade.",
-      features: ["Vazamentos", "Instalações novas", "Manutenção", "Emergências"]
+      title: "Hidráulica",
+      description: "Instalações e reparos hidráulicos com garantia.",
+      features: ["Vazamentos", "Instalações", "Manutenção", "Emergências"]
     },
     {
       icon: PaintBucket,
       title: "Acabamentos",
-      description: "Pintura, revestimentos e detalhes que fazem toda a diferença.",
-      features: ["Pintura interna/externa", "Revestimentos", "Texturas", "Detalhes decorativos"]
+      description: "Pintura e revestimentos que fazem a diferença.",
+      features: ["Pintura", "Revestimentos", "Texturas", "Detalhes"]
     }
   ];
 
@@ -63,60 +63,59 @@ const ServicesSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-construction-gray mb-4">
-              Nossos <span className="text-construction-orange">Serviços</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Nossos <span className="text-logo-orange">Serviços</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Soluções completas para transformar seu espaço com a experiência de 30 anos do General
+              Soluções completas com 30 anos de experiência
             </p>
           </div>
 
           {/* Services Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
+                className="border-0 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group bg-card/50 backdrop-blur-sm"
               >
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-construction-orange/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-construction-orange/20 transition-colors">
-                    <service.icon className="w-8 h-8 text-construction-orange" />
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-logo-orange/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-logo-orange/20 transition-colors">
+                    <service.icon className="w-6 h-6 text-logo-orange" />
                   </div>
                   
-                  <h3 className="text-xl font-bold text-construction-gray mb-4">
+                  <h3 className="text-lg font-bold text-foreground mb-3">
                     {service.title}
                   </h3>
                   
-                  <p className="text-muted-foreground mb-6">
+                  <p className="text-muted-foreground mb-4 text-sm">
                     {service.description}
                   </p>
                   
-                  <ul className="space-y-2">
+                  <div className="grid grid-cols-2 gap-2">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-2 text-sm">
-                        <div className="w-1.5 h-1.5 bg-construction-orange rounded-full"></div>
-                        <span>{feature}</span>
-                      </li>
+                      <div key={featureIndex} className="flex items-center space-x-2 text-xs">
+                        <div className="w-1 h-1 bg-logo-orange rounded-full"></div>
+                        <span className="text-muted-foreground">{feature}</span>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </CardContent>
               </Card>
             ))}
           </div>
 
           {/* Call to Action */}
-          <div className="text-center bg-construction-light-gray rounded-2xl p-8 md:p-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-construction-gray mb-4">
-              Pronto para começar seu projeto?
+          <div className="text-center bg-gradient-to-r from-logo-light/20 to-background rounded-2xl p-8 md:p-12 border border-border/50">
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              Pronto para começar?
             </h3>
             <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Entre em contato conosco e receba um orçamento gratuito e detalhado para seu projeto. 
-              O General está pronto para transformar suas ideias em realidade!
+              Entre em contato e receba um orçamento gratuito e detalhado para seu projeto.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-construction-orange hover:bg-construction-orange/90 px-8"
+                className="bg-logo-orange hover:bg-logo-orange/90 text-white px-8 shadow-lg hover:shadow-xl transition-all duration-300"
                 onClick={scrollToContact}
               >
                 Solicitar Orçamento
@@ -124,7 +123,7 @@ const ServicesSection = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-construction-blue text-construction-blue hover:bg-construction-blue hover:text-white px-8"
+                className="border-logo-blue text-logo-blue hover:bg-logo-blue hover:text-white px-8 transition-all duration-300"
                 onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
               >
                 WhatsApp Direto
