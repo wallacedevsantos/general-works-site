@@ -1,21 +1,22 @@
 
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
+import FeaturesAndStatsSection from '@/components/FeaturesAndStatsSection';
 import AboutSection from '@/components/AboutSection';
 import ServicesSection from '@/components/ServicesSection';
-import GallerySection from '@/components/GallerySection';
+
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen mx-auto">
       <Header />
       <HeroSection />
-      <AboutSection />
       <ServicesSection />
-      <GallerySection />
+      <FeaturesAndStatsSection />
+      <AboutSection />
       <ContactSection />
       <Footer />
       <WhatsAppButton />

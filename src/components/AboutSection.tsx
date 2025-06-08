@@ -5,7 +5,7 @@ import { Award, Users, Clock, CheckCircle2, Hammer, Heart } from 'lucide-react';
 const AboutSection = () => {
   return (
     <section id="sobre" className="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-background to-logo-light/5">
-      <div className="container mx-auto max-w-7xl px-3 md:px-4">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header - Mobile optimized */}
         <div className="text-center mb-12 md:mb-16 lg:mb-20">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6">
@@ -22,9 +22,11 @@ const AboutSection = () => {
           <div className="relative order-2 lg:order-1">
             <div className="aspect-square bg-gradient-to-br from-logo-blue/20 to-logo-orange/20 rounded-2xl md:rounded-3xl flex items-center justify-center text-foreground relative overflow-hidden shadow-xl md:shadow-2xl">
               <div className="text-center z-10 p-4">
-                <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-logo-orange rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 shadow-xl">
-                  <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">JN</span>
-                </div>
+                <img
+                src="/lovable-uploads/perfil_general_construcoes.png"
+                alt="José Nilson dos Santos"
+                className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover mx-auto mb-4 md:mb-6 shadow-xl"
+              />
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">José Nilson dos Santos</h3>
                 <p className="text-base sm:text-lg text-muted-foreground mb-3 md:mb-4">Fundador & "General"</p>
                 <div className="flex items-center justify-center space-x-2">
@@ -41,34 +43,20 @@ const AboutSection = () => {
           {/* Story - Mobile optimized */}
           <div className="space-y-6 md:space-y-8 order-1 lg:order-2">
             <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground leading-tight">
-              Da Paixão pela Construção ao Reconhecimento Profissional
+              Da paixão pela Construção ao Reconhecimento Profissional
             </h3>
             
             <div className="space-y-4 md:space-y-6 text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
               <p>
-                José Nilson dos Santos iniciou sua jornada na construção civil ainda jovem, movido pela paixão 
-                em <strong className="text-logo-orange">transformar projetos em realidade</strong>. Ao longo de mais de 
-                <strong> 30 anos</strong>, construiu não apenas casas e estabelecimentos, mas também uma 
-                reputação sólida baseada na confiança e excelência.
+                José Nilson dos Santos, o "General", construiu uma sólida reputação em mais de 30 anos na construção civil, 
+                transformando projetos em realidade com liderança e atenção aos detalhes.
               </p>
               
               <p>
-                O apelido <strong>"General"</strong> surgiu naturalmente nos canteiros de obra, onde sua 
-                <strong className="text-logo-blue"> liderança natural</strong> e capacidade de coordenar equipes 
-                com precisão militar se destacavam. Cada projeto sob sua supervisão é executado com 
-                <strong className="text-logo-orange"> disciplina e atenção aos detalhes</strong>.
-              </p>
-              
-              <p>
-                Especializado em todos os aspectos da construção civil - desde fundações robustas até 
-                acabamentos refinados - o General construiu sua empresa sobre os pilares da 
-                <strong> seriedade, pontualidade e compromisso</strong> com a satisfação total do cliente.
-              </p>
-
-              <p>
-                Hoje, a <strong>General Construções e Reformas</strong> é sinônimo de 
+                Sua empresa, a <strong>General Construções e Reformas</strong>, é hoje sinônimo de 
                 <strong className="text-logo-orange"> qualidade garantida</strong> e 
-                <strong className="text-logo-blue"> confiabilidade absoluta</strong> em toda a Grande São Paulo.
+                <strong className="text-logo-blue"> confiabilidade absoluta</strong> em toda a Grande São Paulo, 
+                baseada em seriedade, pontualidade e compromisso com a satisfação do cliente.
               </p>
             </div>
 
@@ -78,7 +66,7 @@ const AboutSection = () => {
                 { icon: Award, text: 'Mais de 500 Obras Concluídas' },
                 { icon: Users, text: '100% de Clientes Satisfeitos' }, 
                 { icon: Clock, text: 'Pontualidade Rigorosa' },
-                { icon: Heart, text: 'Paixão pelo que Faz' }
+                { icon: Heart, text: 'Qualidade Garantida' }
               ].map((achievement, index) => (
                 <div key={index} className="flex items-center space-x-3 p-3 md:p-4 rounded-lg bg-background/80 backdrop-blur-sm border border-border/50">
                   <achievement.icon className="w-4 h-4 md:w-5 md:h-5 text-logo-orange flex-shrink-0" />

@@ -5,7 +5,7 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 const Footer = () => {
   return (
     <footer className="bg-logo-dark text-primary-foreground">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         {/* Main Footer Content */}
         <div className="py-16">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -15,7 +15,7 @@ const Footer = () => {
                 <img 
                   src="/lovable-uploads/fe934f48-b0db-4a5f-aa80-f5d0fed0a611.png" 
                   alt="General Construções e Reformas" 
-                  className="h-16 w-auto mb-4 filter brightness-0 invert"
+                  className="h-16 w-auto mb-4"
                 />
               </div>
               
@@ -27,11 +27,7 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-logo-orange" />
-                  <span>(11) 9999-9999</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-logo-orange" />
-                  <span>contato@generalconstrucoes.com</span>
+                  <span>(11) 94652-2725</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-logo-orange" />

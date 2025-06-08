@@ -18,7 +18,6 @@ const Header = () => {
     { id: 'inicio', label: 'Início' },
     { id: 'sobre', label: 'Sobre' },
     { id: 'servicos', label: 'Serviços' },
-    { id: 'galeria', label: 'Galeria' },
     { id: 'contato', label: 'Contato' },
   ];
 
@@ -53,7 +52,7 @@ const Header = () => {
           <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Phone className="w-4 h-4 text-logo-orange" />
-              <span className="font-medium">(11) 9999-9999</span>
+              <span className="font-medium">(11) 94652-2725</span>
             </div>
             <Button 
               size="sm" 
@@ -91,7 +90,7 @@ const Header = () => {
               {/* Mobile Contact Info */}
               <div className="flex items-center space-x-2 py-4 px-3 text-muted-foreground border-t border-border/30 mt-2">
                 <Phone className="w-5 h-5 text-logo-orange" />
-                <span className="font-medium text-base">(11) 9999-9999</span>
+                <span className="font-medium text-base">(11) 94652-2725</span>
               </div>
               
               {/* Mobile CTA */}

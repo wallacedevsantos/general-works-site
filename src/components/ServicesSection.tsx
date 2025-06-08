@@ -34,7 +34,7 @@ const ServicesSection = () => {
       icon: Settings,
       title: "Telhados e Coberturas",
       description: "Instalação, manutenção e reparo de telhados com materiais de primeira qualidade, garantindo proteção duradoura contra intempéries.",
-      features: ["Telhado Colonial", "Cobertura Moderna", "Sistema de Calhas", "Estruturas Metálicas"],
+      features: ["Telhado Colonial", "Cobertura Moderna", "Sistema de Calhas", "Estruturas de Madeira"],
       gradient: "from-logo-orange/10 to-logo-orange/5"
     },
     {
@@ -69,7 +69,7 @@ const ServicesSection = () => {
 
   return (
     <section id="servicos" className="py-16 md:py-20 lg:py-24 bg-background">
-      <div className="container mx-auto max-w-7xl px-3 md:px-4">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header - Mobile optimized */}
         <div className="text-center mb-12 md:mb-16 lg:mb-20">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6">
@@ -171,7 +171,7 @@ const ServicesSection = () => {
               size="lg" 
               variant="outline" 
               className="w-full sm:w-auto border-2 border-logo-blue text-logo-blue hover:bg-logo-blue hover:text-white px-6 sm:px-8 md:px-10 py-4 md:py-6 text-base md:text-lg font-semibold transition-all duration-300 touch-manipulation"
-              onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
+              onClick={() => window.open('https://wa.me/5511946522725', '_blank')}
             >
               Conversar no WhatsApp
             </Button>

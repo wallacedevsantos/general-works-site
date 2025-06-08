@@ -9,7 +9,7 @@ const WhatsAppButton = () => {
 
   const handleWhatsAppClick = () => {
     const message = "Olá! Gostaria de solicitar um orçamento para meu projeto.";
-    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/5511946522725?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
