@@ -160,7 +160,7 @@ const ContactSection = () => {
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => handleInputChange('phone', e.target.value)}
-                        placeholder="(11) 994652-2725"
+                        placeholder="(DD) 99999-9999"
                         required
                       />
                     </div>
