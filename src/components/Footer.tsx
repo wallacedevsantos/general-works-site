@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="lg:col-span-2">
               <div className="mb-6">
                 <img 
-                  src="/lovable-uploads/fe934f48-b0db-4a5f-aa80-f5d0fed0a611.png" 
+                  src={`${import.meta.env.BASE_URL}lovable-uploads/fe934f48-b0db-4a5f-aa80-f5d0fed0a611.png`} 
                   alt="General Construções e Reformas" 
                   className="h-16 w-auto mb-4"
                 />

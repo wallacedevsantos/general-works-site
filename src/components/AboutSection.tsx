@@ -23,7 +23,7 @@ const AboutSection = () => {
             <div className="aspect-square bg-gradient-to-br from-logo-blue/20 to-logo-orange/20 rounded-2xl md:rounded-3xl flex items-center justify-center text-foreground relative overflow-hidden shadow-xl md:shadow-2xl">
               <div className="text-center z-10 p-4">
                 <img
-                src="/lovable-uploads/perfil_general_construcoes.png"
+                src={`${import.meta.env.BASE_URL}lovable-uploads/perfil_general_construcoes.png`}
                 alt="José Nilson dos Santos"
                 className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover mx-auto mb-4 md:mb-6 shadow-xl"
               />

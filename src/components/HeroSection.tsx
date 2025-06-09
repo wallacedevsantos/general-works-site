@@ -20,7 +20,7 @@ const HeroSection = () => {
             {/* Logo Principal - Responsivo */}
             <div className="mb-6 md:mb-8 animate-fade-in">
               <img 
-                src="/lovable-uploads/fe934f48-b0db-4a5f-aa80-f5d0fed0a611.png" 
+                src={`${import.meta.env.BASE_URL}lovable-uploads/fe934f48-b0db-4a5f-aa80-f5d0fed0a611.png`} 
                 alt="General Construções e Reformas" 
                 className="h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[100%] w-auto mx-auto lg:mx-0"
               />

@@ -28,7 +28,7 @@ const Header = () => {
           {/* Logo - Responsivo */}
           <div className="flex items-center space-x-2">
             <img 
-              src="/lovable-uploads/fe934f48-b0db-4a5f-aa80-f5d0fed0a611.png" 
+              src={`${import.meta.env.BASE_URL}lovable-uploads/fe934f48-b0db-4a5f-aa80-f5d0fed0a611.png`} 
               alt="General Construções e Reformas" 
               className="h-10 w-auto sm:h-12 md:h-14 lg:h-16 xl:h-20"
             />
